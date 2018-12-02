@@ -122,7 +122,9 @@ function execute(cmd, query) {
             var random = contents.split("\r\n");
             for(var i = 0; i < random.length; i++) {
                 let command = random[i].split(",");
-                execute(command[0], command[1]);
+
+                // Removes the quotes so that concert-this works
+                execute(command[0], command[1].slice(1, -1));
             }
     
         });

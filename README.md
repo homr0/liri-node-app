@@ -12,6 +12,3 @@ LIRI is a *Language Interpretation and Recognition Interface*.
   - Returns movie information (including year released, IMDB and Rotten Tomatoes ratings, country, language, plot, and actors) for a movie from OMDb.
 - ```do-what-it-says```
   - Returns random information for bands, songs, and movies.
-
-## Bugs
-- ```do-what-it-says``` is currently having issues with executing the ```concert-this``` command.
