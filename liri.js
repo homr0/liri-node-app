@@ -5,13 +5,23 @@ var request = require("request");
 var moment = require("moment");
 var fs = require("fs");
 var keys = require("./keys.js");
+
 var spotify = new Spotify(keys.spotify);
+var log = fs.createWriteStream("log.txt", { flags: "a" });
 
 var cmd = process.argv[2];
 var query = process.argv[3];
 
-console.log("---");
+const midL = "---";
+const endL = "---------";
 
+// Writes to log.txt and logs to the console the result.
+function writeLog(data) {
+    log.write(data + "\n");
+    console.log(data);
+}
+
+// Executes LIRI commands.
 function execute(cmd, query) {
     if(cmd == "concert-this") {
         // Gets a concert for an artist or band using Bands In Town
@@ -23,18 +33,22 @@ function execute(cmd, query) {
                     let venue = concerts[i].venue;
         
                     // Name of the venue
-                    console.log("Venue: " + venue.name);
+                    writeLog("Venue: " + venue.name);
         
                     // Venue Location
-                    console.log("Location: " + venue.city + ", " + venue.country);
+                    writeLog("Location: " + venue.city + ", " + venue.country);
         
                     // Date of the Event
-                    console.log("Date: " + moment(concerts[i].datetime).format("MM/DD/YYYY"));
+                    writeLog("Date: " + moment(concerts[i].datetime).format("MM/DD/YYYY"));
                     
-                    console.log("---");
+                    if(i == concerts.length - 1) {
+                        writeLog(endL);
+                    } else {
+                        writeLog(midL);
+                    }
                 }
             } else {
-                return console.log("Error: " + error);
+                return writeLog("Error: " + error);
             }
         });
     } else if(cmd == "spotify-this-song") {
@@ -57,21 +71,25 @@ function execute(cmd, query) {
                 for(let j = 0; j < artists.length; j++) {
                     arr.push(artists[j].name);
                 }
-                console.log("Artist(s): " + arr.join(", "));
+                writeLog("Artist(s): " + arr.join(", "));
     
                 // Name of song
-                console.log("Name: " + songs[i].name);
+                writeLog("Name: " + songs[i].name);
     
                 // A preview link of the song from Spotify
-                console.log("Preview URL: " + songs[i].preview_url);
+                writeLog("Preview URL: " + songs[i].preview_url);
     
                 // The album that the song is from
-                console.log("Album: " + songs[i].album.name)
+                writeLog("Album: " + songs[i].album.name);
     
-                console.log("---");
+                if(i == songs.length - 1) {
+                    writeLog(endL);
+                } else {
+                    writeLog(midL);
+                }
             }
         }).catch(function(err) {
-            return console.log("Error: " + err);
+            return writeLog("Error: " + err);
         });
     } else if(cmd == "movie-this") {
         // Finds a movie using OMDb
@@ -82,56 +100,69 @@ function execute(cmd, query) {
     
         request("https://www.omdbapi.com/?t=" + query + "&apikey=trilogy", function(error, response, body) {
             if(error) {
-                return console.log("Error: " + error);
+                return writeLog("Error: " + error);
             }
     
             var movie = JSON.parse(body);
     
             // Title of the movie
-            console.log("Title: " + movie.Title);
+            writeLog("Title: " + movie.Title);
     
             // Year the movie came out
-            console.log("Year: " + movie.Year);
+            writeLog("Year: " + movie.Year);
     
             // IMDB rating of the movie
-            console.log("IMDB Rating: " + movie.imdbRating);
+            writeLog("IMDB Rating: " + movie.imdbRating);
     
             // Rotten Tomatoes Rating of the movie
-            console.log("Rotten Tomatoes Rating: " + movie.Ratings[1].Value);
+            writeLog("Rotten Tomatoes Rating: " + movie.Ratings[1].Value);
             
             // Country where the movie was produced
-            console.log("Country: " + movie.Country);
+            writeLog("Country: " + movie.Country);
        
             // Language of the movie.
-            console.log("Language: " + movie.Language);
+            writeLog("Language: " + movie.Language);
        
             // Plot of the movie.
-            console.log("Plot: " + movie.Plot);
+            writeLog("Plot: " + movie.Plot);
             
             // Actors in the movie.
-            console.log("Actors: " + movie.Actors);
+            writeLog("Actors: " + movie.Actors);
     
-            console.log("---");
+            writeLog(endL);
         });
     } else if(cmd == "do-what-it-says") {
         fs.readFile("./random.txt", "utf-8", function(err, contents) {
             if(err) {
-                return console.log("Error: " + err);
+                return writeLog("Error: " + err);
             }
     
             var random = contents.split("\r\n");
             for(var i = 0; i < random.length; i++) {
-                let command = random[i].split(",");
+                let split = random[i].indexOf(",");
+                let cmd = random[i].substring(0, split);
+                let query = random[i].substring(split + 1);
 
                 // Removes the quotes so that concert-this works
-                execute(command[0], command[1].slice(1, -1));
+                execute(cmd, query.slice(1, -1));
             }
     
         });
     
     } else {
-        console.log("Error: not a recognized command");
+        writeLog("Error: not a recognized command");
     }
 }
+
+// Logs the command.
+var command = "[" + moment().format("DD/MM/YYYY:HH:mm") + "]node liri.js " + cmd;
+
+if(query !== undefined) {
+    command += " " + query;
+}
+
+log.write(command + "\n");
+
+writeLog(endL);
 
 execute(cmd, query);

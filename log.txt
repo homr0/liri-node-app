@@ -1,0 +1,419 @@
+[02/12/2018:18:10]node liri.js do-what-it-says
+---------
+Title: Black Panther
+Year: 2018
+IMDB Rating: 7.4
+Rotten Tomatoes Rating: 97%
+Country: USA, South Africa, South Korea, Australia
+Language: Swahili, Nama, English, Xhosa, Korean
+Plot: After the death of his father, Prince T'Challa ascends to the throne of the small African country of Wakanda. T'Challa is also Black Panther, superhero. Now not only must he govern his country but defeat a dangerous adversary.
+Actors: Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira
+---------
+Venue: Perth Arena
+Location: Perth, Australia
+Date: 12/07/2018
+---
+Venue: Adelaide Entertainment Centre
+Location: Adelaide, Australia
+Date: 12/10/2018
+---
+Venue: Rod Laver Arena
+Location: Melbourne, Australia
+Date: 12/13/2018
+---
+Venue: Qudos Bank Arena
+Location: Sydney, Australia
+Date: 12/16/2018
+---
+Venue: Brisbane Entertainment Centre
+Location: Brisbane, Australia
+Date: 12/18/2018
+---
+Venue: Spark Arena
+Location: Auckland, New Zealand
+Date: 12/21/2018
+---
+Venue: iHeartRadio ALTer Ego 2019
+Location: Los Angeles, United States
+Date: 01/19/2019
+---
+Venue: Palace of Sports
+Location: Shevchenkivs'kyi District, Ukraine
+Date: 01/30/2019
+---
+Venue: VTB Arena
+Location: Tsentralnyy Administrativnyy Okrug, Russia
+Date: 02/02/2019
+---
+Venue: Ice Palace
+Location: Sankt-peterburg, Russia
+Date: 02/04/2019
+---
+Venue: Ice Hall
+Location: Helsingfors, Finland
+Date: 02/06/2019
+---
+Venue: Ericsson Globe Arena
+Location: Stockholm, Sweden
+Date: 02/08/2019
+---
+Venue: Telenor Arena
+Location: Oslo, Norway
+Date: 02/09/2019
+---
+Venue: Royal Arena
+Location: København V, Denmark
+Date: 02/11/2019
+---
+Venue: Barclaycard Arena
+Location: Hamburg, Germany
+Date: 02/12/2019
+---
+Venue: Mercedes-Benz Arena
+Location: Berlin, Germany
+Date: 02/14/2019
+---
+Venue: Atlas Arena
+Location: Łódź, Poland
+Date: 02/15/2019
+---
+Venue: The O2 Arena
+Location: Prague, Czech Republic
+Date: 02/16/2019
+---
+Venue: Wiener Stadthalle
+Location: Vienna, Austria
+Date: 02/17/2019
+---
+Venue: Unipol Arena
+Location: Bologna, Italy
+Date: 02/21/2019
+---
+Venue: Hallenstadion Zurich
+Location: Zürich, Switzerland
+Date: 02/23/2019
+---
+Venue: Hanns-Martin-Schleyerhalle
+Location: Stuttgart, Germany
+Date: 02/24/2019
+---
+Venue: Lanxess Arena
+Location: Cologne, Germany
+Date: 02/25/2019
+---
+Venue: Genting Arena
+Location: Birmingham, United Kingdom
+Date: 02/27/2019
+---
+Venue: 3Arena
+Location: Dublin, Ireland
+Date: 03/01/2019
+---
+Venue: SSE Arena Belfast
+Location: Belfast, United Kingdom
+Date: 03/02/2019
+---
+Venue: The SSE Hydro Arena
+Location: Glasgow, United Kingdom
+Date: 03/04/2019
+---
+Venue: Manchester Arena
+Location: Manchester, United Kingdom
+Date: 03/05/2019
+---
+Venue: The SSE Arena Wembley
+Location: London, United Kingdom
+Date: 03/07/2019
+---
+Venue: The SSE Arena Wembley
+Location: London, United Kingdom
+Date: 03/08/2019
+---
+Venue: The SSE Arena, Wembley
+Location: London, United Kingdom
+Date: 03/09/2019
+---
+Venue: Accorhotels Arena
+Location: Paris, France
+Date: 03/11/2019
+---
+Venue: Ziggo Dome
+Location: Amsterdam, Netherlands
+Date: 03/12/2019
+---
+Venue: Palais 12
+Location: Brussels, Belgium
+Date: 03/13/2019
+---
+Venue: Bizkaia Arena (BEC!)
+Location: Bilbao, Spain
+Date: 03/15/2019
+---
+Venue: WiZink Centre
+Location: Madrid, Spain
+Date: 03/16/2019
+---
+Venue: Altice Arena
+Location: Lisbon, Portugal
+Date: 03/17/2019
+---
+Venue: Lollapalooza Chile: March 29 - 31
+Location: Santiago, Chile
+Date: 03/29/2019
+---
+Venue: Lollapalooza Argentina: March 29 - 31
+Location: Buenos Aires, Argentina
+Date: 03/29/2019
+---
+Venue: Lollapalooza Brasil: April 5 - 7
+Location: São Paulo, Brazil
+Date: 04/05/2019
+---
+Venue: Estéreo Picnic: April 5 - 7
+Location: Bogotá, Colombia
+Date: 04/05/2019
+---
+Venue: Arena Monterrey
+Location: Monterrey, Mexico
+Date: 05/01/2019
+---
+Venue: Sports Palace
+Location: Mexico City, Mexico
+Date: 05/03/2019
+---
+Venue: Sports Palace
+Location: Mexico City, Mexico
+Date: 05/04/2019
+---
+Venue: ARENA VFG
+Location: Guadalajara, Mexico
+Date: 05/06/2019
+---
+Venue: Pepsi Live at Rogers Arena
+Location: Vancouver, Canada
+Date: 05/12/2019
+---
+Venue: Scotiabank Saddledome
+Location: Calgary, Canada
+Date: 05/14/2019
+---
+Venue: Rogers Place
+Location: Edmonton, Canada
+Date: 05/15/2019
+---
+Venue: Bell MTS Place
+Location: Winnipeg, Canada
+Date: 05/17/2019
+---
+Venue: Budweiser Gardens
+Location: London, Canada
+Date: 05/20/2019
+---
+Venue: Richcraft Live at Canadian Tire Centre
+Location: Ottawa, Canada
+Date: 05/21/2019
+---
+Venue: Bell Centre
+Location: Montreal, Canada
+Date: 05/22/2019
+---
+Venue: Scotiabank Arena
+Location: Toronto, Canada
+Date: 05/28/2019
+---
+Venue: Scotiabank Arena
+Location: Toronto, Canada
+Date: 05/29/2019
+---
+Venue: Van Andel Arena
+Location: Grand Rapids, United States
+Date: 05/31/2019
+---
+Venue: KeyBank Center
+Location: Buffalo, United States
+Date: 06/01/2019
+---
+Venue: Barclays Center
+Location: Brooklyn, United States
+Date: 06/04/2019
+---
+Venue: PPG Paints Arena
+Location: Pittsburgh, United States
+Date: 06/07/2019
+---
+Venue: Boardwalk Hall
+Location: Atlantic City, United States
+Date: 06/08/2019
+---
+Venue: John Paul Jones Arena
+Location: Charlottesville, United States
+Date: 06/09/2019
+---
+Venue: PNC Arena
+Location: Raleigh, United States
+Date: 06/11/2019
+---
+Venue: Spectrum Center
+Location: Charlotte, United States
+Date: 06/12/2019
+---
+Venue: Jacksonville Veterans Memorial Arena
+Location: Jacksonville, United States
+Date: 06/14/2019
+---
+Venue: American Airlines Arena
+Location: Miami, United States
+Date: 06/15/2019
+---
+Venue: Amway Center
+Location: Orlando, United States
+Date: 06/16/2019
+---
+Venue: Legacy Arena at the BJCC
+Location: Birmingham, United States
+Date: 06/18/2019
+---
+Venue: Smoothie King Center
+Location: New Orleans, United States
+Date: 06/19/2019
+---
+Venue: Toyota Center
+Location: Houston, United States
+Date: 06/21/2019
+---
+Venue: AT&T Center
+Location: San Antonio, United States
+Date: 06/22/2019
+---
+Venue: Frank Erwin Center
+Location: Austin, United States
+Date: 06/23/2019
+---
+Venue: Chesapeake Energy Arena
+Location: Oklahoma City, United States
+Date: 06/25/2019
+---
+Venue: FedExForum
+Location: Memphis, United States
+Date: 06/26/2019
+---
+Venue: Bankers Life Fieldhouse
+Location: Indianapolis, United States
+Date: 06/28/2019
+---
+Venue: Nationwide Arena
+Location: Columbus, United States
+Date: 06/29/2019
+---
+Venue: Nationwide Arena
+Location: Columbus, United States
+Date: 06/30/2019
+---
+Venue: Sziget Festival
+Location: Budapest, Hungary
+Date: 08/13/2019
+---
+Venue: Reading and Leeds Festival
+Location: Reading, United Kingdom
+Date: 08/24/2019
+---------
+Artist(s): Backstreet Boys
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=199e260232084bd4abb381fd6eda3afb
+Album: The Hits--Chapter One
+---
+Artist(s): Backstreet Boys
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=199e260232084bd4abb381fd6eda3afb
+Album: Millennium
+---
+Artist(s): Anthem Lights
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/4a163fbfa2dbbe4433f277e0e7395dca656364f5?cid=199e260232084bd4abb381fd6eda3afb
+Album: Covers Part IV
+---
+Artist(s): Tyler and Mark
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/99c791194bbd4e5f315ca8964babf0b69bc520b3?cid=199e260232084bd4abb381fd6eda3afb
+Album: Beautiful Dreams
+---
+Artist(s): Dynamite Boy
+Name: I Want It That Way
+Preview URL: null
+Album: Punk Goes Pop
+---
+Artist(s): "Weird Al" Yankovic
+Name: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Preview URL: https://p.scdn.co/mp3-preview/e217ea111ab84a777f204252fce4b18d5de3ae80?cid=199e260232084bd4abb381fd6eda3afb
+Album: Poodle Hat
+---
+Artist(s): Backstreet Boys
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/2f96341eb8415a3efb27375db1c4d59928408c2f?cid=199e260232084bd4abb381fd6eda3afb
+Album: 90 Sweet 90s Hits!
+---
+Artist(s): Backstreet Boys
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=199e260232084bd4abb381fd6eda3afb
+Album: NKOTBSB
+---
+Artist(s): Manuel Costa
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/cdde86f49ca4ef217ac08bbbb0c6295c16f015b0?cid=199e260232084bd4abb381fd6eda3afb
+Album: I Want It That Way
+---
+Artist(s): Boyce Avenue
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/764f1dcb8c9a9cec099cc361cb388f931bf023d3?cid=199e260232084bd4abb381fd6eda3afb
+Album: Cover Sessions, Vol. 2
+---
+Artist(s): Glee Cast
+Name: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+Preview URL: https://p.scdn.co/mp3-preview/3aa63b5c98b98ae333e567813e5c720abb2914f0?cid=199e260232084bd4abb381fd6eda3afb
+Album: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+---
+Artist(s): Steel Panther
+Name: I Want It That Way
+Preview URL: null
+Album: I Want It That Way
+---
+Artist(s): MaxLife
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/a6c2734a24cf016a7f884c3f731e64371ba32555?cid=199e260232084bd4abb381fd6eda3afb
+Album: I Want It That Way
+---
+Artist(s): Scott Bradlee's Postmodern Jukebox, Shoshana Bean
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=199e260232084bd4abb381fd6eda3afb
+Album: Selfies on Kodachrome
+---
+Artist(s): #90s Update
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/4722ade5be55bf642f5cc9578b94c092a0fcf3a7?cid=199e260232084bd4abb381fd6eda3afb
+Album: #90s Update
+---
+Artist(s): Scary Pockets, Casey Abrams
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/33685e005149d5e7d0199a764163ff77f7762e29?cid=199e260232084bd4abb381fd6eda3afb
+Album: Nu Funk
+---
+Artist(s): "Weird Al" Yankovic
+Name: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Preview URL: https://p.scdn.co/mp3-preview/5632d8e302d70afaa8f79c962aa4b2032a45b3ef?cid=199e260232084bd4abb381fd6eda3afb
+Album: The Essential "Weird Al" Yankovic
+---
+Artist(s): Backstreet Boys
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/c9302062adf4f59e60335f30c7ca46b487a267fb?cid=199e260232084bd4abb381fd6eda3afb
+Album: NOW That's What I Call 90s Pop
+---
+Artist(s): Landon Austin & Julia Sheer
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/e777be5446dc3df34abc2eaec241edb5a590976c?cid=199e260232084bd4abb381fd6eda3afb
+Album: I Want It That Way
+---
+Artist(s): Scott Bradlee's Postmodern Jukebox, Shoshana Bean
+Name: I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=199e260232084bd4abb381fd6eda3afb
+Album: PMJ Is For Lovers: The Love Song Collection
+---------
