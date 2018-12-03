@@ -1,4 +1,4 @@
-[02/12/2018:18:10]node liri.js do-what-it-says
+[02/12/2018-18:13]node liri.js do-what-it-says
 ---------
 Title: Black Panther
 Year: 2018

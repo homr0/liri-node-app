@@ -155,7 +155,7 @@ function execute(cmd, query) {
 }
 
 // Logs the command.
-var command = "[" + moment().format("DD/MM/YYYY:HH:mm") + "]node liri.js " + cmd;
+var command = "[" + moment().format("DD/MM/YYYY-HH:mm") + "]node liri.js " + cmd;
 
 if(query !== undefined) {
     command += " " + query;
