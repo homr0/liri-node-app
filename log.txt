@@ -1,4 +1,4 @@
-[12/12/2018-11:55]node liri do-what-it-says
+[12/12/2018-12:10]node liri.js do-what-it-says
 ---------------------------
 Spotify results for "I Want it That Way"...
 ---------
