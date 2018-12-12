@@ -18,8 +18,10 @@ if(process.argv.length > 4) {
     }
 }
 
-const midL = "---";
-const endL = "---------";
+var random = [];
+var search = 0;
+const midL = "---------";
+const endL = "---------------------------";
 
 // Writes to log.txt and logs to the console the result.
 function writeLog(data) {
@@ -32,22 +34,65 @@ function writeLog(data) {
     });
 }
 
-// Logs the command.
-var command = "[" + moment().format("DD/MM/YYYY-HH:mm") + "]node liri.js " + cmd;
+function initLiri() {
+    writeLog(endL);
 
-if(query !== undefined) {
-    command += " " + query;
+    // Sets up the initial log data.
+    var program = process.argv[1];
+    if(program.lastIndexOf("/") >= 0) {
+        program = program.substring(program.lastIndexOf("/") + 1);
+    } else if(program.lastIndexOf("\\") >= 0) {
+        program = program.substring(program.lastIndexOf("\\") + 1);
+    }
+
+    // Logs the command.
+    var command = "[" + moment().format("DD/MM/YYYY-HH:mm") + "]node " + program + " " + cmd;
+
+    if(query !== undefined) {
+        command += " " + query;
+    }
+
+    fs.appendFileSync("log.txt", command + "\n", function(err) {
+        if(err) {
+            return console.log(err);
+        }
+    });
+
+    // Gets the commands to run.
+    if(cmd == "do-what-it-says") {
+        fs.readFile("./random.txt", "utf-8", function(err, data) {
+            if(err) {
+                return writeLog("Error: " + err);
+            }
+
+            // Sets up the random array.
+            data = data.split("\r\n");
+
+            for(var i = 0; i < data.length; i++) {
+                var split = data[i].indexOf(",");
+                var cmd = data[i].substring(0, split);
+                var query = data[i].substring(split + 1);
+
+                // Strips out the extra quotes in the queries.
+                if(((query.indexOf("\"") >= 0) || (query.indexOf("'") >= 0)) && (query.charAt(0) == query.charAt(query.length - 1))) {
+                    query = query.slice(1, -1);
+                }
+
+                random.push([cmd, query]);
+            }
+            findStuff();
+        });
+    } else {
+        random.push([cmd, query]);
+        findStuff();
+    }
 }
 
-fs.appendFileSync("log.txt", command + "\n", function(err) {
-    if(err) {
-        return console.log(err);
+function findStuff() {
+    if(search < random.length) {
+        execute(random[search][0], random[search][1]);
     }
-});
-
-writeLog(endL);
-    
-execute(cmd, query);
+}
 
 // Executes LIRI commands.
 function execute(cmd, query) {
@@ -63,10 +108,6 @@ function execute(cmd, query) {
         case "movie-this":
             findMovie(query);
             break;
-
-        case "do-what-it-says":
-            findRandom();
-            break;
         
         default:
             writeLog("Error: not a recognized command");
@@ -77,7 +118,7 @@ function execute(cmd, query) {
 function findConcert(query) {
     axios.get("https://rest.bandsintown.com/artists/" + query + "/events?app_id=codingbootcamp").then(function(response) {
         var concerts = response.data;
-        var concert = "";
+        var concert = query + " will be performing at:\n" + midL + "\n";
 
         for(var i = 0; i < concerts.length; i++) {
             let venue = concerts[i].venue;
@@ -99,6 +140,9 @@ function findConcert(query) {
         }
         
         writeLog(concert);
+
+        search++;
+        findStuff();
     })
     .catch(function(error) {
         return writeLog("Error: " + error);
@@ -117,35 +161,40 @@ function findSong(query) {
         query: query
     }).then(function(data) {
         let songs = data.tracks.items;
-        var song = "";
+        var song = "Spotify results for \"" + query + "\"...\n";
+        query = query.toLowerCase();
 
         for(var i = 0; i < songs.length; i++) {
-            // Artist(s)
-            let artists = songs[i].artists;
-            let arr = [];
-            for(let j = 0; j < artists.length; j++) {
-                arr.push(artists[j].name);
-            }
-
-            song += "Artist(s): " + arr.join(", ") + "\n";
-
-            // Name of song
-            song += "Name: " + songs[i].name + "\n";
-
-            // A preview link of the song from Spotify
-            song += "Preview URL: " + songs[i].preview_url + "\n";
-
-            // The album that the song is from
-            song += "Album: " + songs[i].album.name + "\n";
-
-            if(i == songs.length - 1) {
-                song += endL;
-            } else {
+            // Restricts output to just the query.
+            if(songs[i].name.toLowerCase().indexOf(query) >= 0) {
                 song += midL + "\n";
+
+                // Artist(s)
+                let artists = songs[i].artists;
+                let arr = [];
+                for(let j = 0; j < artists.length; j++) {
+                    arr.push(artists[j].name);
+                }
+
+                song += "Artist(s): " + arr.join(", ") + "\n";
+
+                // Name of song
+                song += "Name: " + songs[i].name + "\n";
+
+                // A preview link of the song from Spotify
+                song += "Preview URL: " + songs[i].preview_url + "\n";
+
+                // The album that the song is from
+                song += "Album: " + songs[i].album.name + "\n";
             }
         }
 
+        song += endL;
+
         writeLog(song);
+
+        search++;
+        findStuff();
     }).catch(function(err) {
         return writeLog("Error: " + err);
     });
@@ -187,39 +236,12 @@ function findMovie(query) {
         movieData += "Actors: " + movie.Actors + "\n";
 
         writeLog(movieData + endL);
+
+        search++;
+        findStuff();
     }).catch(function(error) {
         return writeLog("Error: " + error);
     });
 }
 
-// Reads commands off of random.txt.
-function findRandom() {
-    fs.readFile("./random.txt", "utf-8", function(err, data) {
-        if(err) {
-            return writeLog("Error: " + err);
-        }
-
-        // Gets the array of commands and queries.
-        var random = data.split("\r\n");
-
-        for(var i = 0; i < random.length; i++) {
-            var split = random[i].indexOf(",");
-            var cmd = random[i].substring(0, split);
-            var query = random[i].substring(split + 1);
-
-            // Executes each command after stripping out the extra quotes.
-            if(((query.indexOf("\"") >= 0) || (query.indexOf("'") >= 0)) && (query.charAt(0) == query.charAt(query.length - 1))) {
-                query = query.slice(1, -1);
-            }
-            console.log(cmd, query);
-            // execute(cmd, query);
-            if(cmd == "concert-this") {
-                findConcert(query);
-            } else if(cmd == "spotify-this-song") {
-                findSong(query);
-            } else if(cmd == "movie-this") {
-                findMovie(query);
-            }
-        }
-    });
-}
+initLiri();
